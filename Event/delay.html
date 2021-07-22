@@ -1,0 +1,22 @@
+<html>
+    <head>
+​
+    </head>
+    <body>
+        <script>
+            (async()=>{
+                const promise = new Promise((resolve,reject)=>{
+                    setTimeout(resolve,1000,'ok');
+                })
+                console.log('first');
+                console.log('second');
+                await promise.then(()=>{
+                    console.log('waited');
+                });
+                console.log('third');
+            })();
+​
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+    <head>
+​
+    </head>
+    <body>
+        <script>
+            const promise1=Promise.reject(10);
+            const promise2= new Promise((resolve,reject)=>setTimeout(resolve,100,'fast'));
+            const promise3= new Promise((resolve,reject)=>setTimeout(resolve,200,'slow'));
+            Promise.any([promise1,promise2,promise3]).then((value)=>console.log(value));
+        </script>
+    </body>
+</html>

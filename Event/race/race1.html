@@ -1,0 +1,20 @@
+<html>
+    <head>
+​
+    </head>
+    <body>
+        <script>
+            const promise1 = new Promise((resolve,reject)=>{
+                setTimeout(reject,100,'quick');
+            });
+            const promise2 = new Promise((resolve,reject)=>{
+                setTimeout(resolve,200,'slow');
+            });
+            Promise.race([promise1,promise2]).then((value)=>{
+                console.log(value);
+            }).catch((value) => {
+                console.log(value);
+            });
+        </script>
+    </body>
+</html>

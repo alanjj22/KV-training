@@ -1,0 +1,16 @@
+<html>
+    <head>
+​
+    </head>
+    <body>
+        <script>
+            const promise1=Promise.resolve(10);
+            const promise2= new Promise((resolve,reject)=>{
+                setTimeout(reject,100,'foo');
+            });
+            Promise.allSettled([promise1,promise2]).then((results)=>results.forEach((results)=>console.log(results.status))  
+            );
+            
+        </script>
+    </body>
+</html>

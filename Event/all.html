@@ -1,0 +1,20 @@
+<html>
+    <head>
+​
+    </head>
+    <body>
+        <script>
+            const promise1=Promise.resolve(10);
+            const promise2=40;
+            const promise3=new Promise((resolve,reject)=>{
+                resolve("rejected")
+            });
+            Promise.all([promise1,promise2,promise3]).then((values)=>{
+                console.log(values);
+            }).catch(()=>{
+                console.log("error")
+            })
+            
+        </script>
+    </body>
+</html>

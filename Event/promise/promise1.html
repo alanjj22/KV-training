@@ -1,0 +1,23 @@
+<html>
+    <head>
+​
+    </head>
+    <body>
+        <script>
+            const p=new Promise((resolve,reject)=>{
+                var a=1+1;
+                if(a==2){
+                    resolve('success');
+                }
+                else{
+                    reject('failure');
+                }
+            });
+            p.then((message)=>{
+                console.log(message);
+            }).catch((message)=>{
+                console.log(message);
+            })
+        </script>
+    </body>
+</html>
