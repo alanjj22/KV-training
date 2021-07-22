@@ -2,9 +2,9 @@ function validateForm() {
     var name = document.validate.name.value;
     var phone = document.validate.phNo.value;
     var email = document.validate.email.value;
-    var regName = /^[a-zA-Z ]{2,64}$/;
-    var regex_phn=/^(0|(\+91?))[0-9]{10,13}$/;
-    var regex_email=/^[A-Za-z0-9._%+-]+@keyvalue.systems$/;
+    var regName = /[A-Za-z]+\s+[A-Za-z]$/;
+    var regex_phn=/^(0|(\+91?))[0-9]{0,13}$/;
+    var regex_email=/^[A-Za-z0-9.]+@keyvalue.systems$/;
 
     if(!regName.test(name)){
         alert('Invalid name given.');

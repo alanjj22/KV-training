@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.logo{
+    display: flex;
+    justify-content: center;
+}
 .sideBar{
     margin-top: 3vh;
     height: 8vh;
@@ -71,6 +75,8 @@ input, select{
     .logo{
         width: 100%;
         height: 8vh;
+        display: flex;
+        justify-content: flex-start;
     }
     
     img{
