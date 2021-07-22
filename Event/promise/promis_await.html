@@ -1,0 +1,19 @@
+<html>
+    <head>
+​
+    </head>
+    <body>
+        <script>
+            (async()=>{
+                const promise1=Promise.resolve(10);
+                const promise2=new Promise((resolve,reject)=>{
+                    resolve("resolved");
+                })
+                console.log("first");
+                let result=await Promise.all([promise1,promise2]);
+                console.log(result);
+                console.log('next');
+            })();
+        </script>
+    </body>
+</html>
